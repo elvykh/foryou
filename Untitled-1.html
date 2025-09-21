@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You Imam 🥰</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #ffeaa7, #fab1a0, #fd79a8, #e84393, #a29bfe, #6c5ce7);
+            background-size: 400% 400%;
+            animation: cuteGradient 6s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @keyframes cuteGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Cute floating elements */
+        .cute-element {
+            position: absolute;
+            font-size: 2rem;
+            animation: floatCute 4s ease-in-out infinite;
+            opacity: 0.8;
+        }
+
+        .cute-element:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+        .cute-element:nth-child(2) { top: 20%; right: 10%; animation-delay: 1s; }
+        .cute-element:nth-child(3) { bottom: 25%; left: 10%; animation-delay: 2s; }
+        .cute-element:nth-child(4) { bottom: 15%; right: 20%; animation-delay: 3s; }
+        .cute-element:nth-child(5) { top: 60%; left: 5%; animation-delay: 2.5s; }
+        .cute-element:nth-child(6) { top: 40%; right: 8%; animation-delay: 1.5s; }
+        .cute-element:nth-child(7) { bottom: 40%; left: 25%; animation-delay: 3.5s; }
+        .cute-element:nth-child(8) { top: 70%; right: 25%; animation-delay: 0.5s; }
+
+        @keyframes floatCute {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg); 
+                opacity: 0.6;
+            }
+            50% { 
+                transform: translateY(-25px) rotate(10deg); 
+                opacity: 1;
+            }
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .main-text {
+            font-size: 3.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b9d, #c44569, #f8b500, #f39c12);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: wiggle 2s ease-in-out infinite;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-2deg) scale(1); }
+            25% { transform: rotate(2deg) scale(1.05); }
+            50% { transform: rotate(-1deg) scale(1); }
+            75% { transform: rotate(1deg) scale(1.02); }
+        }
+
+        .cute-emoji {
+            font-size: 3rem;
+            animation: bounce 1.5s ease-in-out infinite;
+            margin: 0 10px;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) scale(1); }
+            40% { transform: translateY(-15px) scale(1.2); }
+            60% { transform: translateY(-8px) scale(1.1); }
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #2d3436;
+            font-weight: bold;
+            margin-top: 15px;
+            animation: fadeInUp 2s ease-out;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Cloud decorations */
+        .cloud {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            animation: floatSlow 8s ease-in-out infinite;
+        }
+
+        .cloud:before,
+        .cloud:after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+        }
+
+        .cloud1 {
+            width: 80px;
+            height: 30px;
+            top: 20%;
+            left: 80%;
+            animation-delay: 0s;
+        }
+
+        .cloud1:before {
+            width: 40px;
+            height: 40px;
+            top: -20px;
+            left: 10px;
+        }
+
+        .cloud1:after {
+            width: 30px;
+            height: 30px;
+            top: -15px;
+            right: 10px;
+        }
+
+        .cloud2 {
+            width: 60px;
+            height: 25px;
+            bottom: 30%;
+            left: 85%;
+            animation-delay: 4s;
+        }
+
+        .cloud2:before {
+            width: 30px;
+            height: 30px;
+            top: -15px;
+            left: 8px;
+        }
+
+        .cloud2:after {
+            width: 25px;
+            height: 25px;
+            top: -12px;
+            right: 8px;
+        }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateX(0px) translateY(0px); }
+            50% { transform: translateX(-20px) translateY(-10px); }
+        }
+
+        /* Kawaii stars */
+        .kawaii-star {
+            position: absolute;
+            font-size: 1.5rem;
+            animation: twinkle 2s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-text { font-size: 2.5rem; }
+            .cute-emoji { font-size: 2rem; }
+            .subtitle { font-size: 1.1rem; }
+            .container { padding: 30px; margin: 20px; }
+        }
+
+        @media (max-width: 480px) {
+            .main-text { font-size: 2rem; letter-spacing: 1px; }
+            .cute-emoji { font-size: 1.5rem; }
+            .subtitle { font-size: 1rem; }
+            .container { padding: 25px; margin: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cute floating elements -->
+    <div class="cute-element">🌸</div>
+    <div class="cute-element">🦄</div>
+    <div class="cute-element">🌈</div>
+    <div class="cute-element">💕</div>
+    <div class="cute-element">🍭</div>
+    <div class="cute-element">🌟</div>
+    <div class="cute-element">🎀</div>
+    <div class="cute-element">🧸</div>
+
+    <!-- Clouds -->
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+
+    <!-- Kawaii stars -->
+    <div class="kawaii-star" style="top: 15%; left: 20%; animation-delay: 0s;">✨</div>
+    <div class="kawaii-star" style="top: 25%; right: 30%; animation-delay: 1s;">⭐</div>
+    <div class="kawaii-star" style="bottom: 20%; left: 30%; animation-delay: 2s;">✨</div>
+    <div class="kawaii-star" style="bottom: 35%; right: 15%; animation-delay: 1.5s;">⭐</div>
+
+    <div class="container">
+        <div class="main-text">
+            <span class="cute-emoji">🥰</span>
+            I LOVE YOU IMAM
+            <span class="cute-emoji">💖</span>
+        </div>
+        <div class="subtitle">
+            You're my sweetest angel! 👼✨
+        </div>
+    </div>
+
+    <script>
+        // Cute particle effects
+        function createCuteParticle() {
+            const cuteEmojis = ['💝', '🌸', '🦋', '🍬', '🌺', '💫', '🎈', '🌻'];
+            const particle = document.createElement('div');
+            particle.innerHTML = cuteEmojis[Math.floor(Math.random() * cuteEmojis.length)];
+            particle.style.position = 'absolute';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = '100%';
+            particle.style.fontSize = (Math.random() * 20 + 15) + 'px';
+            particle.style.pointerEvents = 'none';
+            particle.style.zIndex = '1';
+            particle.style.animation = 'floatUp 4s linear forwards';
+            document.body.appendChild(particle);
+
+            setTimeout(() => particle.remove(), 4000);
+        }
+
+        // Add floating animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes floatUp {
+                0% {
+                    transform: translateY(0) rotate(0deg);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Create particles periodically
+        setInterval(createCuteParticle, 800);
+
+        // Click effect with cute emojis
+        document.addEventListener('click', function(e) {
+            const cuteClickEmojis = ['💕', '🥰', '😘', '💖', '✨', '🌟'];
+            
+            for (let i = 0; i < 3; i++) {
+                setTimeout(() => {
+                    const emoji = document.createElement('div');
+                    emoji.innerHTML = cuteClickEmojis[Math.floor(Math.random() * cuteClickEmojis.length)];
+                    emoji.style.position = 'absolute';
+                    emoji.style.left = e.clientX + (Math.random() - 0.5) * 60 + 'px';
+                    emoji.style.top = e.clientY + (Math.random() - 0.5) * 60 + 'px';
+                    emoji.style.fontSize = '2rem';
+                    emoji.style.pointerEvents = 'none';
+                    emoji.style.zIndex = '1000';
+                    emoji.style.animation = 'bounce 1.5s ease-out forwards';
+                    document.body.appendChild(emoji);
+
+                    setTimeout(() => emoji.remove(), 1500);
+                }, i * 150);
+            }
+        });
+
+        // Add kawaii face animation on hover
+        const container = document.querySelector('.container');
+        container.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05) rotate(1deg)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+
+        container.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1) rotate(0deg)';
+        });
+    </script>
+</body>
+</html>
